@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeTrail Lite | My Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="profile">
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">⌘</span> CodeTrail Lite</div>
+    <div class="nav-label">MAIN MENU</div>
+    <a class="nav-link" href="index.html"><span class="nav-icon">⌂</span> Overview</a>
+    <a class="nav-link" href="analytics.html"><span class="nav-icon">▥</span> Analytics</a>
+    <a class="nav-link" href="activity.html"><span class="nav-icon">▦</span> Activity</a>
+    <div class="nav-label">PERSONAL</div>
+    <a class="nav-link" href="recommendations.html"><span class="nav-icon">✦</span> Recommendations</a>
+    <a class="nav-link active" href="profile.html"><span class="nav-icon">◉</span> My Profile</a>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="welcome">
+        <h1>My Profile 👤</h1>
+        <p>Your LeetCode account and coding statistics.</p>
+      </div>
+      <div class="user-pill">CodeTrail Lite</div>
+    </header>
+
+    <section class="card">
+      <div class="profile-avatar">CT</div>
+      <h2 id="profileName" style="margin:0 0 6px;">Loading profile...</h2>
+      <p id="profileUsername" style="color:var(--muted);font-size:13px;">@username</p>
+      <div class="tag">LeetCode Developer</div>
+    </section>
+
+    <h2 class="section-title">Account Information</h2>
+    <section class="card">
+      <div class="panel-heading"><h2>Connect a LeetCode Username</h2></div>
+      <label for="usernameInput" style="font-size:12px;font-weight:700;">LeetCode username</label>
+      <input class="input" id="usernameInput" type="text" placeholder="Enter your LeetCode username">
+      <button class="button" id="updateProfileBtn">Update Profile</button>
+      <p class="status">Enter your LeetCode username without spaces. Your selection is saved in this browser.</p>
+      <p class="status" id="statusMessage">Loading profile...</p>
+    </section>
+
+    <h2 class="section-title">Your Statistics</h2>
+    <div class="grid">
+      <div class="card stat-card purple">
+        <div class="stat-label">Total Solved</div>
+        <div class="stat-value" id="profileTotal">—</div>
+        <div class="stat-note">Accepted problems</div>
+      </div>
+      <div class="card stat-card green">
+        <div class="stat-label">Easy Solved</div>
+        <div class="stat-value" id="profileEasy">—</div>
+        <div class="stat-note">Easy difficulty</div>
+      </div>
+      <div class="card stat-card blue">
+        <div class="stat-label">Medium Solved</div>
+        <div class="stat-value" id="profileMedium">—</div>
+        <div class="stat-note">Medium difficulty</div>
+      </div>
+      <div class="card stat-card pink">
+        <div class="stat-label">Hard Solved</div>
+        <div class="stat-value" id="profileHard">—</div>
+        <div class="stat-note">Hard difficulty</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Global Ranking</h2>
+    <section class="card">
+      <div class="stat-label">LeetCode ranking</div>
+      <div class="stat-value" id="profileRanking">—</div>
+      <p class="status">Ranking is displayed when the backend provides it.</p>
+    </section>
+
+    <div class="footer-note">CodeTrail Lite · Your coding identity.</div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeTrail Lite | Analytics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body data-page="analytics">
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-icon">⌘</span>
+      CodeTrail Lite
+    </div>
+
+    <div class="nav-label">MAIN MENU</div>
+    <a class="nav-link" href="index.html">⌂ Overview</a>
+    <a class="nav-link active" href="analytics.html">▥ Analytics</a>
+    <a class="nav-link" href="activity.html">▦ Activity</a>
+
+    <div class="nav-label">PERSONAL</div>
+    <a class="nav-link" href="recommendations.html">✦ Recommendations</a>
+    <a class="nav-link" href="profile.html">◉ My Profile</a>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <div class="welcome">
+        <h1>Performance Analytics 📊</h1>
+        <p>Understand your problem-solving performance.</p>
+      </div>
+      <div class="user-pill">
+        User: <strong data-username>Sheetalsoule</strong>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <div class="card stat-card purple">
+        <div class="stat-label">Total Solved</div>
+        <div class="stat-value" id="totalSolved">—</div>
+        <div class="stat-note">All accepted problems</div>
+      </div>
+
+      <div class="card stat-card green">
+        <div class="stat-label">Easy Problems</div>
+        <div class="stat-value" id="easySolved">—</div>
+        <div class="stat-note">Fundamental concepts</div>
+      </div>
+
+      <div class="card stat-card blue">
+        <div class="stat-label">Medium Problems</div>
+        <div class="stat-value" id="mediumSolved">—</div>
+        <div class="stat-note">Intermediate concepts</div>
+      </div>
+
+      <div class="card stat-card pink">
+        <div class="stat-label">Hard Problems</div>
+        <div class="stat-value" id="hardSolved">—</div>
+        <div class="stat-note">Advanced challenges</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Difficulty Analysis</h2>
+
+    <div class="grid two">
+
+      <section class="card">
+        <div class="panel-heading">
+          <h2>Difficulty Distribution</h2>
+          <span>Share of solved problems</span>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="difficultyChart"></canvas>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="panel-heading">
+          <h2>Problems by Difficulty</h2>
+          <span>Comparison</span>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="barChart"></canvas>
+        </div>
+      </section>
+
+    </div>
+
+    <h2 class="section-title">Your Progress Breakdown</h2>
+
+    <section class="card">
+
+      <div class="progress-row">
+        <div class="progress-info">
+          <strong>Easy</strong>
+          <span id="easyProgressCount">—</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill easy-fill" id="easyProgress"></div>
+        </div>
+      </div>
+
+      <div class="progress-row">
+        <div class="progress-info">
+          <strong>Medium</strong>
+          <span id="mediumProgressCount">—</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill medium-fill" id="mediumProgress"></div>
+        </div>
+      </div>
+
+      <div class="progress-row">
+        <div class="progress-info">
+          <strong>Hard</strong>
+          <span id="hardProgressCount">—</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill hard-fill" id="hardProgress"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <p class="status" id="statusMessage">
+      Loading analytics...
+    </p>
+
+    <div class="footer-note">
+      CodeTrail Lite · Your effort, visualised.
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

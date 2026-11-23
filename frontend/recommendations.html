@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeTrail Lite | Recommendations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="recommendations">
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">⌘</span> CodeTrail Lite</div>
+    <div class="nav-label">MAIN MENU</div>
+    <a class="nav-link" href="index.html"><span class="nav-icon">⌂</span> Overview</a>
+    <a class="nav-link" href="analytics.html"><span class="nav-icon">▥</span> Analytics</a>
+    <a class="nav-link" href="activity.html"><span class="nav-icon">▦</span> Activity</a>
+    <div class="nav-label">PERSONAL</div>
+    <a class="nav-link active" href="recommendations.html"><span class="nav-icon">✦</span> Recommendations</a>
+    <a class="nav-link" href="profile.html"><span class="nav-icon">◉</span> My Profile</a>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="welcome">
+        <h1>Your Learning Path ✨</h1>
+        <p>Suggestions based on your current LeetCode progress.</p>
+      </div>
+      <div class="user-pill">User: <strong data-username>Sheetalsoule</strong></div>
+    </header>
+
+    <section class="card" style="background:linear-gradient(120deg,#7657f6,#4789f5);color:white;">
+      <h2 style="margin-top:0;">Keep growing, one problem at a time! 🚀</h2>
+      <p style="font-size:13px;line-height:1.8;opacity:.9;">
+        Your current solved-problem count is
+        <strong id="recommendationTotal">—</strong>.
+        Use these suggestions to plan your next coding session.
+      </p>
+    </section>
+
+    <h2 class="section-title">Recommended Next Steps</h2>
+    <div id="recommendationList">
+      <div class="card">Preparing your recommendations...</div>
+    </div>
+
+    <h2 class="section-title">A Simple Weekly Practice Plan</h2>
+    <div class="grid">
+      <div class="card stat-card purple">
+        <div class="stat-label">Monday – Tuesday</div>
+        <div class="stat-value">Arrays</div>
+        <div class="stat-note">Practise array and string questions.</div>
+      </div>
+      <div class="card stat-card blue">
+        <div class="stat-label">Wednesday – Thursday</div>
+        <div class="stat-value">DSA</div>
+        <div class="stat-note">Work on stacks, queues and linked lists.</div>
+      </div>
+      <div class="card stat-card pink">
+        <div class="stat-label">Friday – Saturday</div>
+        <div class="stat-value">Practice</div>
+        <div class="stat-note">Try problems without looking at solutions.</div>
+      </div>
+      <div class="card stat-card green">
+        <div class="stat-label">Sunday</div>
+        <div class="stat-value">Review</div>
+        <div class="stat-note">Revise mistakes and previous questions.</div>
+      </div>
+    </div>
+
+    <p class="status" id="statusMessage">Loading your recommendations...</p>
+    <div class="footer-note">CodeTrail Lite · Learn consistently. Improve confidently.</div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
